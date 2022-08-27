@@ -1,0 +1,6 @@
+<svg width="100%" height="100%" viewBox="0 0 10 10" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <path d="M4.997,0.026C7.74,0.026 9.967,2.25 9.967,4.99C9.967,7.73 7.74,9.954 4.997,9.954C2.253,9.954 0.026,7.73 0.026,4.99C0.026,2.25 2.253,0.026 4.997,0.026ZM4.997,0.846C7.287,0.846 9.146,2.703 9.146,4.99C9.146,7.277 7.287,9.134 4.997,9.134C2.707,9.134 0.847,7.277 0.847,4.99C0.847,2.703 2.707,0.846 4.997,0.846Z"/>
+    <g transform="matrix(0.764331,0,0,0.764331,1.13797,0.871431)">
+        <rect x="1.89" y="2.194" width="6.397" height="6.397" style="fill:none;stroke:black;stroke-width:1.31px;"/>
+    </g>
+</svg>

@@ -1,0 +1,109 @@
+/*Removes all bullshit default*/
+*:not(svg, svg|*){all:unset;}
+title {display: none;}
+body{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    border:0;
+    overflow: hidden;
+}
+svg{
+    display:block;
+    overflow:hidden;
+}
+
+.MenuBar{
+    min-height: 5px;
+    display:flex;
+    min-height: 30px;
+    height:10vw;    
+    max-height: 100px;
+    width:100vw;
+    position:fixed;
+    top:0;
+    background-color:  rgb(90, 90, 90);
+    font-size:70px;
+}   
+.MenuBar button {
+    display:block;
+    margin:0;
+    padding:0;
+    border:0;
+    font-size: 20px;
+    width:100px;
+    cursor: pointer;
+    min-height: inherit;
+    height:inherit;
+    max-height: inherit;
+    text-align:center;
+    background-color: inherit;
+}
+/*:hover behavior has a lower Specificity than id, meaning it has to be inside a class*/
+
+button:hover {background-color: rgb(173, 173, 173);}    
+button:active {background-color: rgb(255, 255, 255);}
+
+
+.BTNdropdown_file {
+    display:block;
+    min-height: inherit;
+    height:inherit;
+    width:100px;
+    max-height: inherit;
+    background-color: inherit;
+    font-size:inherit;
+}
+.FileBTNContent {
+    display:none;
+    background-color: rgb(173, 173, 173);
+    width:100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.FileBTNContent a{
+    color: black;
+    font-size: 15px;
+    display:block;   
+}
+
+.Content{
+    display:flex;
+    height:100vh;
+    background-color: rgb(189, 189, 189);
+    color:rgb(49, 49, 49);
+}
+
+/*used for menu drop down links e.g: File/New   update with it's own class*/
+a{
+    display:inline-block;
+    padding:5px 0px 5px 0px;
+}
+a:hover{
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+.Toolbar{
+    display:block;
+    width:5%;
+    position:fixed;
+    top:50vh;
+    font-size: larger;
+    font-weight: bold;
+}
+ul.toolList{
+    display: block;
+    padding-inline-start: 40px;
+}
+li{
+    list-style-type: none ;
+    width:70px;
+
+}
+li:hover{
+    outline:2px solid white;  
+    background-color: rgba(255, 255, 255, 0.517);
+}
