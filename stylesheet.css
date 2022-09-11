@@ -55,14 +55,35 @@ button:active {background-color: rgb(255, 255, 255);}
     background-color: inherit;
     font-size:inherit;
 }
-.FileBTNContent {
+.BTNdropdown_edit {
+    display:block;
+    min-height: inherit;
+    height:inherit;
+    width:100px;
+    max-height: inherit;
+    background-color: inherit;
+    font-size:inherit;
+}
+#fileBTNContent {
     display:none;
     background-color: rgb(173, 173, 173);
     width:100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.FileBTNContent a{
+#fileBTNContent a{
+    color: black;
+    font-size: 15px;
+    display:block;   
+}
+#editBTNContent {
+    display:none;
+    background-color: rgb(173, 173, 173);
+    width:100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#editBTNContent a{
     color: black;
     font-size: 15px;
     display:block;   
@@ -98,11 +119,12 @@ ul.toolList{
     display: block;
     padding-inline-start: 40px;
 }
-li{
-    list-style-type: none ;
-    width:70px;
+li{list-style-type: none ;}
 
-}
+li.toolListLi{width:70px;}
+li.toolPropertyLi{
+    width:180px;
+    }
 li:hover{
     outline:2px solid white;  
     background-color: rgba(255, 255, 255, 0.517);
@@ -112,4 +134,8 @@ li:hover{
 .svgContent{
     display:block;
     position:absolute;
+}
+
+canvas{
+    background-color: red;
 }

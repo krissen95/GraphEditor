@@ -2,37 +2,63 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="stylesheet.css">
+    <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="/src/index.js" charset="utf-8" defer></script>
+    <script type="module" src="/src/index.js" charset="utf-8" defer></script>
     <title>GraphEditor</title>
 </head>
-<body>
+<body>  
+    <div  class="Content">
+        <svg class="svgContent" width="100%" height="100%">
+
+        </svg>
+    </div>
 
     <div class="MenuBar">
         <div class="BTNdropdown_file">
-            <button onclick="btnToggle('.FileBTNContent')">File</button>
-                <div class="FileBTNContent">
+            <button id="btnFileToggle">File</button>
+            <!--<button onclick="btnToggle('.FileBTNContent')">File</button>-->
+                <div id="fileBTNContent">
                     <a href="#">New</a>
                     <a href="#">Open</a>
                     <a href="#">Save</a>
                     <a href="#">Exit</a>
             </div>
         </div>
-        <button>Edit</button>
+        <div class="BTNdropdown_edit">
+            <button id="btnEditToggle">Edit</button>
+                <div id="editBTNContent">
+                    <a href="#">Undo</a>
+                    <a href="#">Redo</a>
+                    <a href="#">Cut</a>
+                    <a href="#">Copy</a>
+                    <a href="#">Paste</a>
+                    <a href="#">Find...</a>
+            </div>
+        </div>
     </div>
+
+
 
     <div class="Toolbar">
         <ul class="toolList">            
             <svg width="30px" height="30px" viewBox="0 0 10 10"> <use href="#SVGtool"/> </svg>
-            <li class="btnSvgCircleToggle" onclick="btnSvgCircle(event)">circle</li>
-            <li>line</li>
-            <li>text</li>
+            <li class="toolListLi" id="btnSvgSelectToggle">select</li>
+            <li class="toolListLi" id="btnSvgCircleToggle">circle</li>
+            <li class="toolListLi" id="btnSvgLineToggle" >line</li>
+            <li class="toolListLi">text</li>
+        </ul>
+        <ul class="toolProperty">
+            <li class="toolPropertyLi" id="toolProperty1">Property 1</li>
+            <li class="toolPropertyLi" id="toolProperty2">Property 2</li>
+            <li class="toolPropertyLi" id="toolProperty3">Property 3</li>
+            <li class="toolPropertyLi" id="toolProperty4">Property 4</li>
         </ul>
     </div>
-    <div  class="Content">
-    </div>
+    
+
 </body>
 </html>
 

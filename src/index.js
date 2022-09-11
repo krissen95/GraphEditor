@@ -1,67 +1,62 @@
-let toggleFile = false;
-let toggleEdit = false;
+import { BtnSvgCircle, AddSVGCircle} from "./addCircle.js";
+import {BtnSvgSelect, SelectSVG} from "./selectSvg.js";
+
+let toggleMenu = false;
 var toggleSvgCircle = false;
-const screenClick = document.querySelector('.Content');
+var toggleSvgSelector = false;
 
 /*Canvas Svg Element definition*/ 
-const node = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-node.setAttribute("class", "svgContent");
-node.setAttribute("width", "100");
-node.setAttribute("height", "100");
-//const circle = document.createElement("circle");
-const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
-circle.setAttribute("cx" , "50");
-circle.setAttribute("cy" , "50");
-circle.setAttribute("r" , "40");
-circle.setAttribute("stroke" , "green");
-circle.setAttribute("stroke-width","4");
-circle.setAttribute("fill","yellow");
-node.appendChild(circle);
+const screenClick = document.querySelector('.svgContent');
+var circleCount = 0;
+const toolProperty = document.querySelector('.toolProperty');
+toolProperty.setAttribute('style', 'display:none');
 
-/*Main Menu*/
-    function btnToggle(toggleContent){
-        let togglebox = document.querySelector(toggleContent);
-        if(toggleFile){
-            toggleFile= !toggleFile;
-            togglebox.setAttribute('style','display:none');
-        }
-        else if(!toggleFile){
-            toggleFile= !toggleFile
-            togglebox.setAttribute('style','display:block');
-        }
-    }
 
-    /*SVG Tool button circle*/
-    function btnSvgCircle(event){
-        let toggle = document.querySelector('.btnSvgCircleToggle');
-        event.stopPropagation();
-        if(toggleSvgCircle){
-            console.log("circle set to false");
-            toggleSvgCircle= !toggleSvgCircle;
-            toggle.setAttribute('style','outline:none');
-            screenClick.removeEventListener("click", AddSVGCircle);
+
+//Toggling Menubar
+const toggleFileContent =document.querySelector('#fileBTNContent');
+const btnListenerFile =document.querySelector('#btnFileToggle').addEventListener("click", function(){btnToggle(toggleFileContent)});
+const toggleEditContent =document.querySelector('#editBTNContent');
+const btnListenerEdit =document.querySelector('#btnEditToggle').addEventListener("click", function(){btnToggle(toggleEditContent)});
+
+//Toggling Circle tool
+const btnListenerSvgCircle = document.querySelector('#btnSvgCircleToggle').addEventListener("pointerdown", function(){
+    BtnSvgCircle(toggleSvgCircle, toolProperty);
+    toggleSvgCircle = !toggleSvgCircle;
+});
+
+//Toggling Select tool
+const btnListenerSvgSelector = document.querySelector('#btnSvgSelectToggle').addEventListener("pointerdown", function(){
+    BtnSvgSelect(toggleSvgSelector, toolProperty);
+    toggleSvgSelector = !toggleSvgSelector;
+});
+
+
+/*Menubar toggle function*/
+function btnToggle(toggleContent){
+        console.log("file click!" + toggleContent);
+        if(toggleMenu){
+            toggleMenu= !toggleMenu;
+            toggleContent.setAttribute('style','display:none');
         }
-        else if(!toggleSvgCircle){
-            console.log("circle set to true");
-            toggleSvgCircle= !toggleSvgCircle;
-            toggle.setAttribute('style','background-color: white;');
+        else if(!toggleMenu){
+            toggleMenu= !toggleMenu
+            toggleContent.setAttribute('style','display:block');
         }
     }
-function AddSVGCircle(event){
-    if(!event.detail||event.detail==1){
-        console.log("spawn");
-        console.log(event.clientY, event.clientX);
-        screenClick.appendChild(node);
-    }
-}
 
-   /*Master Tool Manager*/
-    function WorkMode(){
-        if(toggleSvgCircle === true){screenClick.addEventListener("click", AddSVGCircle);}
+    //Listening for canvas activity
+    screenClick.addEventListener("pointerdown", event=>{
+        if(toggleSvgCircle === true){
+            AddSVGCircle(event, circleCount)
+        }
+        else if(toggleSvgSelector === true){
+            SelectSVG()
+        }
+    })
 
-        window.requestAnimationFrame(WorkMode);
-    }
 
-    /*Canvas Update Loop*/
-    WorkMode();
+
+
+    
     
