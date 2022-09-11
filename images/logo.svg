@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="head" transform="matrix(2.03722,0,0,2.03722,-328.658,-112.866)">
+        <circle cx="355.598" cy="251.554" r="190.294" style="fill:white;"/>
+        <clipPath id="_clip1">
+            <circle cx="355.598" cy="251.554" r="190.294"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="nonse" transform="matrix(0.500312,0,0,1.60234,155.372,-204.593)">
+                <rect x="268.14" y="277.595" width="252.826" height="12.333"/>
+            </g>
+            <g id="l-face" transform="matrix(4.63355,0,0,5.14802,-836.004,-1216.48)">
+                <circle cx="197.533" cy="284.995" r="45.427" style="fill:white;stroke:black;stroke-width:2px;"/>
+            </g>
+            <g id="r-face" transform="matrix(-4.63355,0,0,5.14802,1544.86,-1216.48)">
+                <circle cx="197.533" cy="284.995" r="45.427" style="fill:white;stroke:black;stroke-width:2px;"/>
+            </g>
+            <g id="r-eye" transform="matrix(0.964075,0,0,0.964075,266.964,-24.0758)">
+                <circle cx="197.533" cy="284.995" r="45.427" style="fill:rgb(138,138,138);"/>
+            </g>
+            <g id="l-eye" transform="matrix(0.964075,0,0,0.964075,61.2771,-24.0758)">
+                <circle cx="197.533" cy="284.995" r="45.427" style="fill:rgb(138,138,138);"/>
+            </g>
+            <g id="l-iris" transform="matrix(0.478788,0,0,0.478788,156.744,114.229)">
+                <circle cx="197.533" cy="284.995" r="45.427"/>
+            </g>
+            <g id="r-iris" transform="matrix(0.478788,0,0,0.478788,362.824,114.229)">
+                <circle cx="197.533" cy="284.995" r="45.427"/>
+            </g>
+        </g>
+        <circle cx="355.598" cy="251.554" r="190.294" style="fill:none;stroke:black;stroke-width:9.82px;"/>
+    </g>
+</svg>
