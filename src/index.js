@@ -12,7 +12,6 @@ const toolProperty = document.querySelector('.toolProperty');
 toolProperty.setAttribute('style', 'display:none');
 
 
-
 //Toggling Menubar
 const toggleFileContent =document.querySelector('#fileBTNContent');
 const btnListenerFile =document.querySelector('#btnFileToggle').addEventListener("click", function(){btnToggle(toggleFileContent)});
@@ -31,7 +30,6 @@ const btnListenerSvgSelector = document.querySelector('#btnSvgSelectToggle').add
     toggleSvgSelector = !toggleSvgSelector;
 });
 
-
 /*Menubar toggle function*/
 function btnToggle(toggleContent){
         console.log("file click!" + toggleContent);
@@ -45,18 +43,12 @@ function btnToggle(toggleContent){
         }
     }
 
-    //Listening for canvas activity
-    screenClick.addEventListener("pointerdown", event=>{
-        if(toggleSvgCircle === true){
-            AddSVGCircle(event, circleCount)
-        }
-        else if(toggleSvgSelector === true){
-            SelectSVG()
-        }
-    })
-
-
-
-
-    
-    
+//Listening for canvas activity
+screenClick.addEventListener("pointerdown", event=>{
+    if(toggleSvgCircle === true){
+        AddSVGCircle(event, circleCount)
+    }
+    else if(toggleSvgSelector === true){
+        SelectSVG()
+    }
+})

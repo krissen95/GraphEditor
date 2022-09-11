@@ -1,6 +1,16 @@
 "use strict";
 const screenClick = document.querySelector('.svgContent');
 
+//Circle tool attributes
+const prop1 = document.querySelector('#toolProperty1');
+const prop2 = document.querySelector('#toolProperty2');
+const prop3 = document.querySelector('#toolProperty3');
+const prop4 = document.querySelector('#toolProperty4');
+const colorPickerLine = document.createElement('input');
+const colorPickerFill = document.createElement('input');
+const lineWidthNumber = document.createElement('input');
+const radiusNumber = document.createElement('input');
+
 //Select circle tool
 function BtnSvgCircle(toggleSvgCircle, toolProperty){
     let toggle = document.querySelector('#btnSvgCircleToggle');
@@ -16,34 +26,27 @@ function BtnSvgCircle(toggleSvgCircle, toolProperty){
         toggle.setAttribute('style','background-color: white;');
         
         toolProperty.setAttribute('style', 'display:block');
-        const prop1 = document.querySelector('#toolProperty1');
-        const prop2 = document.querySelector('#toolProperty2');
-        const prop3 = document.querySelector('#toolProperty3');
-        const prop4 = document.querySelector('#toolProperty4');
-        
-        prop1.innerText="Fill Color";
-        const colorPicker1 = document.createElement('input');
-        colorPicker1.setAttribute("type", "color");
-        colorPicker1.setAttribute("value", "white");
-        prop1.appendChild(colorPicker1);
-        
 
-        prop2.innerText="Outline Color";
-        const colorPicker2 = document.createElement('input');
-        colorPicker2.setAttribute("type", "color");
-        colorPicker2.setAttribute("value", "black");
-        prop2.appendChild(colorPicker2);
+        prop1.innerText="Fill Color ";
+        colorPickerFill.setAttribute("type", "color");
+        colorPickerFill.setAttribute("value", "#ffffff");
+        prop1.appendChild(colorPickerFill);
+        
+        prop2.innerText="Line Color ";
+        colorPickerLine.setAttribute("type", "color");
+        colorPickerLine.setAttribute("value", "#000000");
+        prop2.appendChild(colorPickerLine);
 
-        prop3.innerText="Line Width";
-        const lineWidthNumber = document.createElement('input');
+        prop3.innerText="Line Width ";
         lineWidthNumber.setAttribute("type", "number");
         lineWidthNumber.setAttribute("step", "1");
+        lineWidthNumber.setAttribute("value", "4");
         prop3.appendChild(lineWidthNumber);
 
-        prop4.innerText="Radius";
-        const radiusNumber = document.createElement('input');
+        prop4.innerText="Radius ";    
         radiusNumber.setAttribute("type", "number");
         radiusNumber.setAttribute("step", "1");
+        radiusNumber.setAttribute("value", "40");
         prop4.appendChild(radiusNumber);
     }
     
@@ -53,10 +56,10 @@ function BtnSvgCircle(toggleSvgCircle, toolProperty){
 function AddSVGCircle(event, circleCount){
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute("id", `circleId_${circleCount}`);
-        circle.setAttribute("r" , "40");
-        circle.setAttribute("stroke" , "green");
-        circle.setAttribute("stroke-width","4");
-        circle.setAttribute("fill","yellow");
+        circle.setAttribute("r" , radiusNumber.valueAsNumber);
+        circle.setAttribute("stroke" , colorPickerLine.value);
+        circle.setAttribute("stroke-width",lineWidthNumber.valueAsNumber);
+        circle.setAttribute("fill",colorPickerFill.value);
         circle.setAttribute("cx" , event.clientX);
         circle.setAttribute("cy" , event.clientY);
         screenClick.appendChild(circle);
