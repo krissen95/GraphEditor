@@ -14,7 +14,7 @@ svg{
     overflow:hidden;
 }
 
-.MenuBar{
+.menuBar{
     min-height: 5px;
     display:flex;
     min-height: 30px;
@@ -26,7 +26,7 @@ svg{
     background-color:  rgb(90, 90, 90);
     font-size:70px;
 }   
-.MenuBar button {
+.menuBar button {
     display:block;
     margin:0;
     padding:0;
@@ -46,7 +46,7 @@ button:hover {background-color: rgb(173, 173, 173);}
 button:active {background-color: rgb(255, 255, 255);}
 
 
-.BTNdropdown_file {
+.btnDropdownFile {
     display:block;
     min-height: inherit;
     height:inherit;
@@ -55,7 +55,7 @@ button:active {background-color: rgb(255, 255, 255);}
     background-color: inherit;
     font-size:inherit;
 }
-.BTNdropdown_edit {
+.btnDropdownEdit {
     display:block;
     min-height: inherit;
     height:inherit;
@@ -64,32 +64,32 @@ button:active {background-color: rgb(255, 255, 255);}
     background-color: inherit;
     font-size:inherit;
 }
-#fileBTNContent {
+#content_btn_file {
     display:none;
     background-color: rgb(173, 173, 173);
     width:100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-#fileBTNContent a{
+#content_btn_file a{
     color: black;
     font-size: 15px;
     display:block;   
 }
-#editBTNContent {
+#content_btn_edit {
     display:none;
     background-color: rgb(173, 173, 173);
     width:100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-#editBTNContent a{
+#content_btn_edit a{
     color: black;
     font-size: 15px;
     display:block;   
 }
 
-.Content{
+.contentGraphic{
     display:flex;
     height:100vh;
     background-color: rgb(189, 189, 189);
@@ -107,7 +107,7 @@ a:hover{
 }
 
 
-.Toolbar{
+.windowToolbar{
     display:block;
     width:5%;
     position:fixed;
@@ -131,7 +131,7 @@ li:hover{
 }
 
 
-.svgContent{
+.contentSvg{
     display:block;
     position:absolute;
 }

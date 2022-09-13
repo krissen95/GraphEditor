@@ -6,31 +6,31 @@ var toggleSvgCircle = false;
 var toggleSvgSelector = false;
 
 /*Canvas Svg Element definition*/ 
-const screenClick = document.querySelector('.svgContent');
+const screenClick = document.querySelector('.contentSvg');
 var circleCount = 0;
 const toolProperty = document.querySelector('.toolProperty');
 toolProperty.setAttribute('style', 'display:none');
 
 
-//Toggling Menubar
-const toggleFileContent =document.querySelector('#fileBTNContent');
-const btnListenerFile =document.querySelector('#btnFileToggle').addEventListener("click", function(){btnToggle(toggleFileContent)});
-const toggleEditContent =document.querySelector('#editBTNContent');
-const btnListenerEdit =document.querySelector('#btnEditToggle').addEventListener("click", function(){btnToggle(toggleEditContent)});
+//Toggling menuBar
+const toggleFileContent =document.querySelector('#content_btn_file');
+const btnListenerFile =document.querySelector('#btn_file_toggle').addEventListener("click", function(){btnToggle(toggleFileContent)});
+const toggleEditContent =document.querySelector('#content_btn_edit');
+const btnListenerEdit =document.querySelector('#btn_edit_toggle').addEventListener("click", function(){btnToggle(toggleEditContent)});
 
 //Toggling Circle tool
-const btnListenerSvgCircle = document.querySelector('#btnSvgCircleToggle').addEventListener("pointerdown", function(){
+const btnListenerSvgCircle = document.querySelector('#btntoggle_svgcircle').addEventListener("pointerdown", function(){
     BtnSvgCircle(toggleSvgCircle, toolProperty);
     toggleSvgCircle = !toggleSvgCircle;
 });
 
 //Toggling Select tool
-const btnListenerSvgSelector = document.querySelector('#btnSvgSelectToggle').addEventListener("pointerdown", function(){
+const btnListenerSvgSelector = document.querySelector('#btntoggle_svgselect').addEventListener("pointerdown", function(){
     BtnSvgSelect(toggleSvgSelector, toolProperty);
     toggleSvgSelector = !toggleSvgSelector;
 });
 
-/*Menubar toggle function*/
+/*menuBar toggle function*/
 function btnToggle(toggleContent){
         console.log("file click!" + toggleContent);
         if(toggleMenu){

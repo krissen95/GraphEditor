@@ -1,6 +1,6 @@
 //Select selection tool
 function BtnSvgSelect (toggleSvgSelector, toolProperty){
-    let toggle = document.querySelector('#btnSvgCircleToggle');
+    let toggle = document.querySelector('#btntoggle_svgcircle');
     console.log("toggle select" );
     /*if(toggleSvgSelector){
 

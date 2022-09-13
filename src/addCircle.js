@@ -1,11 +1,11 @@
 "use strict";
-const screenClick = document.querySelector('.svgContent');
+const screenClick = document.querySelector('.contentSvg');
 
 //Circle tool attributes
-const prop1 = document.querySelector('#toolProperty1');
-const prop2 = document.querySelector('#toolProperty2');
-const prop3 = document.querySelector('#toolProperty3');
-const prop4 = document.querySelector('#toolProperty4');
+const prop1 = document.querySelector('#tool_property1');
+const prop2 = document.querySelector('#tool_property2');
+const prop3 = document.querySelector('#tool_property3');
+const prop4 = document.querySelector('#tool_property4');
 const colorPickerLine = document.createElement('input');
 const colorPickerFill = document.createElement('input');
 const lineWidthNumber = document.createElement('input');
@@ -13,7 +13,7 @@ const radiusNumber = document.createElement('input');
 
 //Select circle tool
 function BtnSvgCircle(toggleSvgCircle, toolProperty){
-    let toggle = document.querySelector('#btnSvgCircleToggle');
+    let toggle = document.querySelector('#btntoggle_svgcircle');
    
     if(toggleSvgCircle){
         toggleSvgCircle= !toggleSvgCircle;

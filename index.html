@@ -10,26 +10,25 @@
     <title>GraphEditor</title>
 </head>
 <body>  
-    <div  class="Content">
-        <svg class="svgContent" width="100%" height="100%">
+    <div  class="contentGraphic">
+        <svg class="contentSvg" width="100%" height="100%">
 
         </svg>
     </div>
 
-    <div class="MenuBar">
-        <div class="BTNdropdown_file">
-            <button id="btnFileToggle">File</button>
-            <!--<button onclick="btnToggle('.FileBTNContent')">File</button>-->
-                <div id="fileBTNContent">
+    <div class="menuBar">
+        <div class="btnDropdownFile">
+            <button id="btn_file_toggle">File</button>
+                <div id="content_btn_file">
                     <a href="#">New</a>
                     <a href="#">Open</a>
                     <a href="#">Save</a>
                     <a href="#">Exit</a>
             </div>
         </div>
-        <div class="BTNdropdown_edit">
-            <button id="btnEditToggle">Edit</button>
-                <div id="editBTNContent">
+        <div class="btnDropdownEdit">
+            <button id="btn_edit_toggle">Edit</button>
+                <div id="content_btn_edit">
                     <a href="#">Undo</a>
                     <a href="#">Redo</a>
                     <a href="#">Cut</a>
@@ -40,19 +39,19 @@
         </div>
     </div>
 
-    <div class="Toolbar">
+    <div class="windowToolbar">
         <ul class="toolList">            
-            <svg width="30px" height="30px" viewBox="0 0 10 10"> <use href="#SVGtool"/> </svg>
-            <li class="toolListLi" id="btnSvgSelectToggle">select</li>
-            <li class="toolListLi" id="btnSvgCircleToggle">circle</li>
-            <li class="toolListLi" id="btnSvgLineToggle" >line</li>
+            <svg width="30px" height="30px" viewBox="0 0 10 10"> <use href="#icon_svgtool"/> </svg>
+            <li class="toolListLi" id="btntoggle_svgselect">select</li>
+            <li class="toolListLi" id="btntoggle_svgcircle">circle</li>
+            <li class="toolListLi" id="btntoggle_svgline" >line</li>
             <li class="toolListLi">text</li>
         </ul>
         <ul class="toolProperty">
-            <li class="toolPropertyLi" id="toolProperty1">Property 1</li>
-            <li class="toolPropertyLi" id="toolProperty2">Property 2</li>
-            <li class="toolPropertyLi" id="toolProperty3">Property 3</li>
-            <li class="toolPropertyLi" id="toolProperty4">Property 4</li>
+            <li class="toolPropertyLi" id="tool_property1">Property 1</li>
+            <li class="toolPropertyLi" id="tool_property2">Property 2</li>
+            <li class="toolPropertyLi" id="tool_property3">Property 3</li>
+            <li class="toolPropertyLi" id="tool_property4">Property 4</li>
         </ul>
     </div>
     
@@ -61,7 +60,7 @@
 </html>
 
 <svg>
-    <symbol id="SVGtool" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <symbol id="icon_svgtool" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
         <path d="M4.997,0.026C7.74,0.026 9.967,2.25 9.967,4.99C9.967,7.73 7.74,9.954 4.997,9.954C2.253,9.954 0.026,7.73 0.026,4.99C0.026,2.25 2.253,0.026 4.997,0.026ZM4.997,0.846C7.287,0.846 9.146,2.703 9.146,4.99C9.146,7.277 7.287,9.134 4.997,9.134C2.707,9.134 0.847,7.277 0.847,4.99C0.847,2.703 2.707,0.846 4.997,0.846Z"/>
         <g transform="matrix(0.764331,0,0,0.764331,1.13797,0.871431)">
             <rect x="1.89" y="2.194" width="6.397" height="6.397" style="fill:none;stroke:black;stroke-width:1.31px;"/>
