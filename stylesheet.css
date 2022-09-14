@@ -1,6 +1,7 @@
 /*Removes all bullshit default*/
 *:not(svg, svg|*){all:unset;}
 title {display: none;}
+
 body{
     display:flex;
     flex-direction: column;
@@ -40,13 +41,12 @@ svg{
     text-align:center;
     background-color: inherit;
 }
-/*:hover behavior has a lower Specificity than id, meaning it has to be inside a class*/
 
 button:hover {background-color: rgb(173, 173, 173);}    
 button:active {background-color: rgb(255, 255, 255);}
 
 
-.btnDropdownFile {
+.btnDropdown {
     display:block;
     min-height: inherit;
     height:inherit;
@@ -55,35 +55,16 @@ button:active {background-color: rgb(255, 255, 255);}
     background-color: inherit;
     font-size:inherit;
 }
-.btnDropdownEdit {
-    display:block;
-    min-height: inherit;
-    height:inherit;
-    width:100px;
-    max-height: inherit;
-    background-color: inherit;
-    font-size:inherit;
-}
-#content_btn_file {
+.contentBtnDropdown{
     display:none;
     background-color: rgb(173, 173, 173);
     width:100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-#content_btn_file a{
-    color: black;
-    font-size: 15px;
-    display:block;   
-}
-#content_btn_edit {
-    display:none;
-    background-color: rgb(173, 173, 173);
-    width:100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-#content_btn_edit a{
+
+.contentBtnDropdown a{
+    text-decoration: none;
     color: black;
     font-size: 15px;
     display:block;   
@@ -120,22 +101,15 @@ ul.toolList{
     padding-inline-start: 40px;
 }
 li{list-style-type: none ;}
-
-li.toolListLi{width:70px;}
-li.toolPropertyLi{
-    width:180px;
-    }
 li:hover{
     outline:2px solid white;  
     background-color: rgba(255, 255, 255, 0.517);
 }
-
+li.toolListLi{width:70px;}
+li.toolPropertyLi{width:180px;}
 
 .contentSvg{
     display:block;
     position:absolute;
 }
 
-canvas{
-    background-color: red;
-}
