@@ -1,15 +1,25 @@
 'use strict';
 
 let fileHandle;
+const svgCanvas = document.querySelector('#contentSvg');
 
 async function FileSave() {
-  console.log('saving file...');
-  /*[fileHandle] = await window.showSaveFilePicker();
+  for(let i=0; i<svgCanvas.childElementCount; i++){
+    console.log(svgCanvas.childNodes[i]);
+  }
+  
+  
+
+  let myBlob = new Blob(
+    //JSON.stringify(value, replacer, space)
+    [JSON.stringify({hello: "this", is: "data"}),],    
+    {type: "application/json"}
+  );
+  
+  let fileHandle = await window.showSaveFilePicker();
   let stream = await fileHandle.createWritable();
-  let text = "hello world"
-  textarea.innerText = text;
-  await stream.write(textarea.innerText); 
-  await stream.close();*/
+  await stream.write(myBlob);
+  //await stream.close();
 }
 
 

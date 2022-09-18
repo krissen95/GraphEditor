@@ -1,4 +1,4 @@
-import { BtnSvgCircle, AddSVGCircle } from './addCircle.js';
+import { BtnSvgCircle, AddSVGCircle} from './addCircle.js';
 import { BtnSvgSelect, SelectSVG } from './selectSvg.js';
 import { FileSave, FileImportSvg, FileOpen } from './fileManager.js';
 
@@ -7,10 +7,11 @@ var toggleSvgCircle = false;
 var toggleSvgSelector = false;
 
 /*Canvas Svg Element definition*/
-const screenClick = document.querySelector('.contentSvg');
+const screenClick = document.querySelector('#contentSvg');
 var circleCount = 0;
 const toolProperty = document.querySelector('.toolProperty');
 toolProperty.setAttribute('style', 'display:none');
+
 
 //Toggling menuBar
 const toggleFileContent = document.querySelector('#content_btn_file');
@@ -57,7 +58,7 @@ function btnToggle(toggleContent) {
 //Listening for canvas activity
 screenClick.addEventListener('pointerdown', (event) => {
   if (toggleSvgCircle === true) {
-    AddSVGCircle(event, circleCount);
+    circleCount = AddSVGCircle(event, circleCount);
   } else if (toggleSvgSelector === true) {
     SelectSVG();
   }

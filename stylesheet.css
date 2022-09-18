@@ -66,7 +66,7 @@ button:active {background-color: rgb(255, 255, 255);}
     display:block;   
 }
 
-.contentGraphic{
+#contentGraphic{
     display:flex;
     height:100vh;
     background-color: rgb(189, 189, 189);
@@ -104,7 +104,7 @@ li:hover{
 li.toolListLi{width:70px;}
 li.toolPropertyLi{width:180px;}
 
-.contentSvg{
+#contentSvg{
     display:block;
     position:absolute;
 }

@@ -1,5 +1,5 @@
 "use strict";
-const screenClick = document.querySelector('.contentSvg');
+const screenClick = document.querySelector('#contentSvg');
 
 //Circle tool attributes
 const prop1 = document.querySelector('#tool_property1');
@@ -10,6 +10,7 @@ const colorPickerLine = document.createElement('input');
 const colorPickerFill = document.createElement('input');
 const lineWidthNumber = document.createElement('input');
 const radiusNumber = document.createElement('input');
+
 
 //Select circle tool
 function BtnSvgCircle(toggleSvgCircle, toolProperty){
@@ -63,7 +64,9 @@ function AddSVGCircle(event, circleCount){
         circle.setAttribute("cx" , event.clientX);
         circle.setAttribute("cy" , event.clientY);
         screenClick.appendChild(circle);
+        console.log(circleCount);
         circleCount = circleCount + 1 ;
+        return (circleCount);
 }
 
 export{BtnSvgCircle, AddSVGCircle};
