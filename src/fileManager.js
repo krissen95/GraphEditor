@@ -4,22 +4,20 @@ let fileHandle;
 const svgCanvas = document.querySelector('#contentSvg');
 
 async function FileSave() {
+  let datacircles;
   for(let i=0; i<svgCanvas.childElementCount; i++){
-    console.log(svgCanvas.childNodes[i]);
+    datacircles += (svgCanvas.childNodes[i].outerHTML)
   }
-  
-  
 
   let myBlob = new Blob(
-    //JSON.stringify(value, replacer, space)
-    [JSON.stringify({hello: "this", is: "data"}),],    
-    {type: "application/json"}
+    [datacircles],
+    {type: "text/plain"}
   );
-  
+
   let fileHandle = await window.showSaveFilePicker();
   let stream = await fileHandle.createWritable();
   await stream.write(myBlob);
-  //await stream.close();
+  await stream.close();
 }
 
 
