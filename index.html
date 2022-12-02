@@ -5,13 +5,14 @@
     <link rel="icon" type="image/x-icon" href="/images/logo.svg" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script type="module" src="/src/index.js" charset="utf-8" defer></script>
     <title>GraphEditor</title>
   </head>
-  <body>
+  <body>  
+
     <div id="contentGraphic">
-      <svg id="contentSvg" width="100%" height="100%"></svg>
+      <svg id="contentSvg" width="100%" height="100%">
+
+      </svg>
     </div>
 
     <div class="menuBar">
@@ -22,6 +23,8 @@
           <a href="#">New</a>
           <a href="#" id="btn_fileopen">Open Project</a>
           <a href="#" id="btn_filesave">Save Project</a>
+          <!--<button id="btn_filesave2">Save Project2</button>-->
+          <!--<input type="file" name="savefile" />-->
           <a href="#">Import svg</a>
           <a href="#">Exit</a>
         </div>
@@ -55,6 +58,14 @@
         <li class="toolPropertyLi" id="tool_property4">Property 4</li>
       </ul>
     </div>
+    
+
+    <script type="module" src="/src/index.js" charset="utf-8" defer></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-streams-polyfill@2.0.2/dist/ponyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/eligrey/Blob.js/Blob.js"></script>
+    <script src="/src/streamsaver/StreamSaver.js"></script>
+
   </body>
 </html>
 
