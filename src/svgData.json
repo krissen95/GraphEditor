@@ -1,0 +1,26 @@
+{
+    "maingraphic":{
+      "g_0":{
+        "g_viz":{
+            "g_viz_att":{
+                "transform":"rotate(0,0,0)translate(0,0,0)scale(1,1,1)" ,
+                "visibility":"hidden"
+            },
+           "cx":"400","cy":"400", "r":"100", 
+           "stroke-width":"4",
+           "fill":"#ffffff","stroke":"#000000"           
+        },
+        "g_ele":{
+            "g_ele_att":{
+                "transform":"rotate(0,0,0)translate(0,0,0)scale(1,1,1)" ,
+                "visibility":"visibility"
+            },
+            "circleId_0":{
+                "cx":"400","cy":"400", "r":"40", 
+                "stroke-width":"4",
+                "fill":"#ffffff","stroke":"#000000",
+              "connections":[]}
+        }
+      }
+    }
+  }

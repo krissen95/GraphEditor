@@ -1,6 +1,14 @@
 import { BtnSvgCircle, AddSVGCircle} from './addCircle.js';
 import { BtnSvgSelect, SelectSVG } from './selectSvg.js';
 import { fileSave, fileImportSvg, fileOpen } from './fileManager.js';
+//import { initCanvas } from './initSvg.js';
+'use strict';
+
+
+//have some kind of loading
+
+//init canvas content
+//initCanvas();
 
 let toggleMenu = false;
 var toggleSvgCircle = false;
@@ -11,6 +19,13 @@ const screenClick = document.querySelector('#contentSvg');
 var circleCount = 0;
 const toolProperty = document.querySelector('.toolProperty');
 toolProperty.setAttribute('style', 'display:none');
+
+
+
+
+
+
+
 
 
 //Toggling menuBar dropdown
