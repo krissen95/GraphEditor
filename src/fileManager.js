@@ -10,30 +10,14 @@ async function fileSave() {
   }
 
   if(!window.showSaveFilePicker){ 
-    //StreamSaver code following below for browsers without showSaveFilePicker
-    const blob = new Blob([svgElements])
-    const fileStream = streamSaver.createWriteStream('svgfile.txt', {
-          size: blob.size // Makes the percentage visiable in the download
-        })
-    const readableStream = blob.stream()
-
-    // (Safari may have pipeTo but it's useless without the WritableStream)
-    if (window.WritableStream && readableStream.pipeTo) {
-      return readableStream.pipeTo(fileStream)
-        .then(() => console.log('done writing'))
-    }
-    // Write (pipe) manually
-    window.writer = fileStream.getWriter()
-    const reader = readableStream.getReader()
-    const pump = () => reader.read()
-      .then(res => res.done
-        ? writer.close()
-        : writer.write(res.value).then(pump))
-    pump()
+    //FileSaver code following below for browsers without showSaveFilePicker
+    const blob = new Blob([svgElements], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "svgfile.txt");
   }
-  
+
   //For browsers without showSaveFilePicker
   else if (window.showSaveFilePicker){
+    console.log("showsavefilepicker");
     const opts = {
       types: [{
         description: 'Text file',
@@ -46,7 +30,6 @@ async function fileSave() {
     await writable.close();
     return handle;
   }
-
 }
 
 
@@ -68,36 +51,8 @@ async function fileOpen() {
 
 
 async function fileImportSvg() {
-  console.log('importingj file...');
+  console.log('importing file...');
   [fileHandle] = await window.showOpenFilePicker();
-
-
 }
 
 export { fileSave, fileImportSvg, fileOpen };
-
-/*const pickerOpts = {
-  types: [
-    {
-      description: 'Xml',
-      accept: {
-        'text/plain': ['.xml']
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};*/
-
-/*const pickerOpts = {
-  types: [
-    {
-      description: 'Images',
-      accept: {
-        'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-      }
-    },
-  ],
-  excludeAcceptAllOption: true,
-  multiple: false
-};*/
